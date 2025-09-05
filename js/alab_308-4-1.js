@@ -26,30 +26,40 @@ for (let i = 0; i < csvDataSplit.length; i++) {
     // Store each “cell” of data in a variable.
     // When you encounter a comma, move to the next cell.
     csvDataSplit[i] = csvDataSplit[i].split(',')
-    // console.log(csvDataSplit[i]);
+    console.log(csvDataSplit[i]);
 }
 // Log each row of data.
-console.log(csvDataSplit)
+console.log(csvDataSplit[3])
 
-let csvArrColum = csvDataSplit[0]
-// let csvObj = { ['csvDataSplit[1]'] }
-// console.log("i'm csvArrColum", csvArrColum)
+let csvArrColumns = csvDataSplit[0]
+console.log(csvArrColumns)
 
+// console.log("i'm csvObj", csvObj)
 for (let i = 1; i < csvDataSplit.length; i++) {
     let csvArrRow = {}
     for (j = 0; j < csvDataSplit[1].length; j++) {
-        csvArrRow[csvArrColum[j]] = csvDataSplit[i][j]
+        csvArrRow[csvArrColumns[j]] = csvDataSplit[i][j]
+    
+    
+        // console.log(csvArrRow)
     }
-    console.log(csvArrRow)
+        const csvObjects = []
+    
+        for (let i = 1; i < csvArrRow.length; i++) {
+            const csvValue = csvArrRow[i]
+            const csvObj = {}
+        
+            csvObjects.push(csvArrRow[i])
+        }
+        console.log(csvObjects)
+//    console.log('', csvArrRow)
+    // console.log(csvDataSplit[3])
 }
 
 
 
 // Using array methods, accomplish the following tasks, in order upon the result of Part 3:
 // Remove the last element from the sorted array.
-
-// let csvArrLastRemoved = csvArrRow.pop();
-// console.log(csvArrLastRemoved)
 
 
 // Insert the following object at index 1:
