@@ -31,15 +31,39 @@ for (let i = 0; i < csvDataSplit.length; i++) {
 // Log each row of data.
 console.log(csvDataSplit)
 
-let csvArrColum = [ csvDataSplit[0] ]
+let csvArrColum = csvDataSplit[0]
 // let csvObj = { ['csvDataSplit[1]'] }
 // console.log("i'm csvArrColum", csvArrColum)
 
-csvDataSplit.forEach((element, index) => {
-    if (index > 0) {
-        csvArrColum.push(element)
-        console.log("i'm csvArrColum", csvArrColum)
+for (let i = 1; i < csvDataSplit.length; i++) {
+    let csvArrRow = {}
+    for (j = 0; j < csvDataSplit[1].length; j++) {
+        csvArrRow[csvArrColum[j]] = csvDataSplit[i][j]
     }
-})
+    console.log(csvArrRow)
+}
+
+
+
+// Using array methods, accomplish the following tasks, in order upon the result of Part 3:
+// Remove the last element from the sorted array.
+
+// let csvArrLastRemoved = csvArrRow.pop();
+// console.log(csvArrLastRemoved)
+
+
+// Insert the following object at index 1:
+
+// { id: "48", name: "Barry", occupation: "Runner", age: "25" }
+
+// Add the following object to the end of the array:
+
+// { id: "7", name: "Bilbo", occupation: "None", age: "111" }
+
+// So far, the results should look like this:
+
+// [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" }, { id: "48", name: "Barry", occupation: "Runner", age: "25" }, { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" }, { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, { id: "7", name: "Bilbo", occupation: "None", age: "111" }]
+
+// Finally, use the values of each object within the array and the array’s length property to calculate the average age of the group. This calculation should be accomplished using a loop.
 
 
