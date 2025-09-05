@@ -35,29 +35,38 @@ let csvArrColumns = csvDataSplit[0]
 console.log(csvArrColumns)
 
 // console.log("i'm csvObj", csvObj)
-for (let i = 1; i < csvDataSplit.length; i++) {
-    let csvArrRow = {}
-    for (j = 0; j < csvDataSplit[1].length; j++) {
-        csvArrRow[csvArrColumns[j]] = csvDataSplit[i][j]
-    
-    
-        // console.log(csvArrRow)
-    }
-        const csvObjects = []
-    
-        for (let i = 1; i < csvArrRow.length; i++) {
-            const csvValue = csvArrRow[i]
-            const csvObj = {}
-        
-            csvObjects.push(csvArrRow[i])
-        }
-        console.log(csvObjects)
-//    console.log('', csvArrRow)
-    // console.log(csvDataSplit[3])
+for (
+	let i = 1;
+	i < csvDataSplit.length;
+	i++
+) {
+	let csvArrRow = {};
+	for (
+		j = 0;
+		j < csvDataSplit[1].length;
+		j++
+	) {
+		csvArrRow[csvArrColumns[j]] =
+			csvDataSplit[i][j];
+
+		// console.log(csvArrRow)
+	}
 }
+const csvObjects = [];
 
+for (
+	let i = 1;
+	i < csvArrRow.length;
+	i++
+) {
+	const csvValue = csvArrRow[i];
+	const csvObj = {};
 
-
+	csvObjects.push(csvArrRow[i]);
+}
+	console.log(csvObjects);
+	//    console.log('', csvArrRow)
+	// console.log(csvDataSplit[3])
 // Using array methods, accomplish the following tasks, in order upon the result of Part 3:
 // Remove the last element from the sorted array.
 
@@ -74,6 +83,4 @@ for (let i = 1; i < csvDataSplit.length; i++) {
 
 // [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" }, { id: "48", name: "Barry", occupation: "Runner", age: "25" }, { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" }, { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, { id: "7", name: "Bilbo", occupation: "None", age: "111" }]
 
-// Finally, use the values of each object within the array and the array’s length property to calculate the average age of the group. This calculation should be accomplished using a loop.
-
-
+/**  Finally, use the values of each object within the array and the array’s length property to calculate the average age of the group. This calculation should be accomplished using a loop. */
