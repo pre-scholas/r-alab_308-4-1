@@ -46,7 +46,7 @@ for (
 		j < csvDataSplit[1].length;
 		j++
 	) {
-		csvArrRow[csvArrColumns[j]] =
+		csvArrRow[ csvArrColumns[j] ] =
 			csvDataSplit[i][j];
 
 		// console.log(csvArrRow)
@@ -54,11 +54,7 @@ for (
 }
 const csvObjects = [];
 
-for (
-	let i = 1;
-	i < csvArrRow.length;
-	i++
-) {
+for (let i = 1; i < csvArrRow.length; i++) {
 	const csvValue = csvArrRow[i];
 	const csvObj = {};
 
